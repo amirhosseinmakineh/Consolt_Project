@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/register&login/loginregister.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Righteous|Teko" rel="stylesheet">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <title>ثبت نام و ورود به سایت</title>
+</head>
+<body>
+  <section id="SelectButton" class="selectButtonArea">
+    <button id="SelectRegister" class="selectButton" onclick="openRegister();">ثبت نام در سایت</button>
+    <button id="SelectLogin" class="selectButton" onclick="openLogin();">ورود به سایت</button>
+    <button id="SelectLogin" class="selectButton" onclick="OpenEmailPage();">بازیابی کلمه عبور  </button>
+  </section>
+  <section id="RegisterForm" class="sectionForm" style="text-align: right;">
+    <div class="formHeader">
+      <h1 class="formHeading" style="text-align: center;">ثبت نام در سایت</h1>
+      <button class="backBtn" onclick="backBegin();">&#10006;</button>
+    </div>
+    <form id="Register" action="#">
+      <div class="inputSection">
+        <label for="Username">نام و نام خانوادگی  </label>
+        <input type="text" id="Username" class="inputText" required placeholder="نام و نام خانوادگی" style="margin-left: 20%;">
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="fa-sort-numeric-asc">کد ملی  </label>
+        <input type="email" id="Email" class="inputText" required placeholder="کد ملی" style="margin-left: 20%;">
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="tetx">نام کاربری  </label>
+        <input type="text" id="Password" class="inputText" required placeholder="نام کاربری" style="margin-left: 20%;">
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="C-Password">کلمه عبور  </label>
+        <input type="password" id="C-Password" class="inputText" required placeholder="کلمه عبور" style="margin-left: 20%;"><br><br>
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="C-Password">تکرار کلمه عبور   </label>
+        <input type="password" id="C-Password" class="inputText" required placeholder="تکرار کلمه عبور" style="margin-left: 20%;"><br><br>
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="C-Password">تاریخ تولد   </label>
+        <input type="date" id="date" class="inputText" required style="margin-left: 20%;"><br><br>
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="C-Password">جنسیت   </label>
+        <input type="radio" id="date" class="inputText" required name="male" value="مرد" style="margin-left: 35%;"><br><br>
+        <input type="radio" id="date" class="inputText" required name="male" value="زن" style="margin-left: 35%;"><br><br>
+        <span class="focus-border"></span>
+      </div>
+      <div class="inputSection">
+        <label for="C-Password">وضعیت تاهل   </label>
+        <input type="radio" id="date" class="inputText" required name="fmale" value="مجرد" style="margin-left: 35%;"><br><br>
+        <input type="radio" id="date" class="inputText" required name="fmale" value="متاهل" style="margin-left: 35%;"><br><br>
+        <input type="radio" id="date" class="inputText" required name="fmale" value="مطلقه" style="margin-left: 35%;"><br><br>
+        <span class="focus-border"></span>
+      </div>
+      <div class="formFooter" style="margin-top: 5%; text-align: right;">
+        <button class="submitButton" type="submit" id="SubmitForm" style="width: 200px; height: 50px;">ثبت نام در سایت</button>
+      </div>
+    </form>
+  </section>
+  <section id="LoginForm" class="sectionForm reSize" style="text-align: right;">
+    <div class="formHeader">
+      <h1 class="formHeading" style="text-align: center;">ورود به سایت</h1>
+      <button class="backBtn" onclick="backBegin();">&#10006;</button>
+    </div>
+    <form id="Register" action="#">
+      <div class="inputSection">
+          <label for="username">نام کاربری</label>
+        <input type="text" id="L-Username" class="inputText" required placeholder="نام کاربری" style="margin-left: 25%;">
+      </div>
+      <div class="inputSection">
+        <label for="password">کلمه عبور  </label>
+        <input type="password" id="L-Email" class="inputText" required placeholder="کلمه عبور" style="margin-left: 25%;">
+      </div>
+      <div class="formFooter">
+        <button class="submitButton" type="submit" id="SubmitForm" style="margin-top: 10%;" >ورود به سایت</button>
+      </div>
+    </form>
+    <div class="optionalSection">
+      <button class="changeButton" type="button" id="GoRegister" onclick="OpenEmailPage();" style="margin-right: 110%; margin-top: -10%;">کلمه عبور خود را فراموش کرده اید ؟</button>
+    </div>
+  </section>
+  <section id="OpenEmailPage" class="sectionForm " style="text-align: center; display: none;" >
+    <div class="formHeader">
+      <h1 class="formHeading" style="text-align: center;">بازیابی کلمه عبور</h1>
+      <button class="backBtn" onclick="backBegin();">&#10006;</button>
+    </div>
+    <form id="Register" action="#" style="margin-top: 10%;">
+        <div class="inputSection">
+            <label for="Email">ایمیل کاربری </label>
+            <input type="email" id="Email" class="inputText" required placeholder="ایمیل کاربری" style="width: 300px;">
+            <span class="focus-border"></span>
+          </div>
+      <div class="formFooter">
+        <button class="submitButton" type="submit" id="SubmitForm" style="width: 300px;">ارسال ایمیل فعالسازی</button>
+      </div>
+    </form>
+  </section>
+  <script>
+      function openRegister() {
+  $('#SelectButton').hide();
+  $('#LoginForm').hide();  
+  $('#RegisterForm').show();
+  
+  $('#L-Username').val('');
+  $('#L-Email').val('');
+  $('#L-Password').val('');
+  $('#AcceptRelogin').prop('checked', false);
+}
+
+function openLogin() {
+  $('#SelectButton').hide();
+  $('#RegisterForm').hide();  
+  $('#LoginForm').show();
+  
+  $('#Username').val('');
+  $('#Email').val('');
+  $('#Password').val('');
+  $('#C-Password').val('');
+  $('#AcceptNewsletter').prop('checked', false);
+  $('#AcceptPolicy').prop('checked', false);
+}
+
+function backBegin() {
+  $('#SelectButton').show();
+  $('#RegisterForm').hide();
+  $('#LoginForm').hide();
+  $('#OpenEmailPage').hide();
+  
+  $('#Username').val('');
+  $('#Email').val('');
+  $('#Password').val('');
+  $('#C-Password').val('');
+  $('#AcceptNewsletter').prop('checked', false);
+  $('#AcceptPolicy').prop('checked', false);
+  $('#L-Username').val('');
+  $('#L-Email').val('');
+  $('#L-Password').val('');
+  $('#AcceptRelogin').prop('checked', false);
+}
+
+function OpenEmailPage() {
+  $('#SelectButton').hide();
+  $('#RegisterForm').hide(); 
+  $('#LoginForm').hide();
+  $('#OpenEmailPage').show();
+  $('#Email').val('');
+}
+
+  </script>
+</body>
+</html>

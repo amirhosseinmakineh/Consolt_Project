@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">پنل ادمین</a>
+            </div>
+
+            <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="Users.html"> پنل ادمین</a>
+                        </li>
+                        <li>
+                            <a href="Users.html"><i class="fa fa-bar-chart-o fa-fw"></i> مدیریت کاربران<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="./Users.html">لیست کاربران</a>
+                                </li>
+                                <li>
+                                    <a href="./CreateUser.html">افزودن کاربر جدید</a>
+                                </li>
+                                <li>
+                                    <a href="./EditUser.html">ویرایش کاربر</a>
+                                </li>
+                                <li>
+                                    <a href="./ListDeleteUser.html">لیست کاربران حذف شده</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="Users.html"><i class="fa fa-bar-chart-o fa-fw"></i> مدیریت مشاور ها<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="./ListConsolt.html">لیست مشاور ها</a>
+                                </li>
+                                <li>
+                                    <a href="./CreateConsolt.html">افزودن مشاور جدید</a>
+                                </li>
+                                <li>
+                                    <a href="./EditConsolt.html">ویرایش مشاور</a>
+                                </li>
+                                <li>
+                                    <a href="./ListDeleteConsolt.html">لیست مشاوران حذف شده</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           لیست مشاوران حذف شده
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-sm-5 col-md-5">
+                                            <input type="text" class="form-control" name="FilterUserName" placeholder="نام کاربری">
+                                        </div>
+                                        <div class="col-sm-5 col-md-5">
+                                            <input type="text" class="form-control" name="FilterFirstNameLastName" placeholder="نام و نام خانوادگی">
+                                        </div>
+                                        <div class="col-sm-2 col-md-2">
+                                            <button type="submit" class="btn btn-info btn-sm">جستجو</button>
+                                            <a class="btn btn-default" href="#">خالی کن</a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <a class="btn btn-success disabled" style="margin-top:2%;" href="./CreateUser.html">افزودن کاربر جدید</a>
+                                <table class="table table-striped table-bordered " id="dataTables-example" style="margin-top: 3%;">
+                                    <thead>
+                                        <tr>
+                                            <th>عکس مشاور</th>
+                                            <th>نام و نام خانوادگی</th>
+                                            <th>نام کاربری</th>
+                                            <th>کد ملی</th>
+                                            <th>تاریخ ثبت نام</th>
+                                            <th>دستورات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-danger" style="background-color: red;">
+                                        <tr class="odd gradeX" style="background-color: red;">
+                                            <td style="background-color: rgb(253, 109, 109);">
+                                                <img src="/MyEshop/MyEshop/MyEshop/wwwroot/img/avatar.jpg" alt="userimage"
+                                                    style="width:50px ;height: 50px;">
+                                            </td>
+                                            <td style="background-color: rgb(253, 109, 109);">امیرحسین مکینه</td>
+                                            <td style="background-color: rgb(253, 109, 109);">amirhossein-8-makineh</td>
+                                            <td style="background-color: rgb(253, 109, 109);">0023097035</td>
+                                            <td style="background-color: rgb(253, 109, 109);">1379/1/27</td>
+                                            <td style="background-color: rgb(253, 109, 109);">
+                                                <div class="d-flex">
+                                                    <a href="./EditUser.html" class="btn btn-warning disabled">ویرایش کاربر</a>
+                                                    <a href="./DeleteUser.html" class="btn btn-danger disabled">حذف کاربر</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button previous disabled" aria-controls="dataTables-example"
+                                            tabindex="0" id="dataTables-example_previous"><a href="#">Previous
+                                                
+                                            </a>
+                                        </li>
+                                        <li class="paginate_button active" aria-controls="dataTables-example"
+                                            tabindex="0">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                            <a href="#">2</a>
+                                            </li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                            <a href="#">3</a>
+                                            </li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                            <a href="#">4</a>
+                                            </li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                            <a href="#">5</a>
+                                            </li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                            <a href="#">6</a>
+                                            </li>
+                                        <li class="paginate_button next" aria-controls="dataTables-example" tabindex="0"
+                                            id="dataTables-example_next">
+                                            <a href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+
+</body>
+
+</html>
